@@ -1,20 +1,68 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# CC_Wordpress
 
-# Run and deploy your AI Studio app
+Ringkasan singkat
 
-This contains everything you need to run your app locally.
+- `CC_Wordpress` adalah antarmuka web berbasis React + Vite yang berisi komponen UI, halaman, dan pengaturan untuk pengelolaan instance dan demo aplikasi. Repositori ini hanya berisi kode sumber frontend; konfigurasi dan kunci API disimpan secara lokal melalui variabel lingkungan.
 
-View your app in AI Studio: https://ai.studio/apps/drive/10LDK5aHy-MJi9Zct-w7hG5MSb06yGNHf
+Persyaratan
 
-## Run Locally
+- **Node.js:** versi LTS yang direkomendasikan (mis. 16+).
+- **npm** atau **yarn** untuk manajemen paket.
 
-**Prerequisites:**  Node.js
+Instalasi — Menjalankan secara lokal
 
+1. Pasang dependensi:
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```
+npm install
+```
+
+2. Siapkan variabel lingkungan:
+
+- Buat file `.env.local` di root proyek (jika belum ada).
+- Tambahkan variabel yang diperlukan, mis. `GEMINI_API_KEY`. Jangan membagikan nilai kunci secara publik.
+
+```
+GEMINI_API_KEY=your_api_key_here
+```
+
+3. Menjalankan dalam mode pengembangan:
+
+```
+npm run dev
+```
+
+Build untuk produksi
+
+```
+npm run build
+npm run preview
+```
+
+Konfigurasi lingkungan
+
+- Semua konfigurasi sensitif harus ditempatkan di `.env.local` dan tidak di-commit ke kontrol versi.
+
+Struktur proyek (ringkas)
+
+- `src/components` — komponen UI.
+- `src/pages` — halaman aplikasi.
+- `src/context` — konteks React (mis. otentikasi).
+- `src/services` — panggilan API dan mock.
+
+Kontribusi
+
+- Fork repositori dan buat branch untuk fitur/bugfix.
+- Ajukan pull request dengan deskripsi perubahan dan instruksi pengujian bila diperlukan.
+
+Lisensi
+
+- Periksa file `LICENSE` di repositori untuk ketentuan lisensi.
+
+Kontak
+
+- Untuk pertanyaan teknis, buka issue di repositori.
+
+Catatan
+
+- README ini sengaja tidak menyertakan informasi publik mengenai lokasi deployment atau tautan layanan.
